@@ -46,7 +46,7 @@ public class arrayquestionsixfib{  // begin class
 
         String tokens[];
         
-        
+        int pcount = 10;
         int max = 0;  
         int count = 0 ; //a varible for counting the iterations of loops and assigning the arry chunk to be printed accordingly
      
@@ -87,13 +87,23 @@ JOptionPane.showMessageDialog(null, banner);
      }//end for
      
      System.out.println("First five numbers");
-     for(count=0; count < 5; count ++){
-     System.out.println(arreh[count]);
-     }//end for
+
+         for(count=0; count < 5; count ++){
+        System.out.print(arreh[count] + ", "); 
+       if (pcount % 3 == 0){
+          System.out.println("");
+       }//end if
+            pcount ++;   
+         }//end for
+
      
-     System.out.println("Last five numbers");
+     System.out.println("\nLast five numbers");
      for(count=max-5; count < max; count ++){
-     System.out.println(arreh[count]);
+     System.out.print(arreh[count]);
+            if (pcount % 3 == 0){
+          System.out.println("");
+       }//end if
+            pcount ++;  
      }//end for
      
     // ************************ print output ****************************
